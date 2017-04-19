@@ -27,7 +27,6 @@ import os
 
 @csrf_exempt
 def test_list(request):
-	# OrderedDict([('id', 1), ('title', u'test snippet'), ('code', u'test1test'), ('linenos', True), ('language', 'abap'), ('style', 'abap')])
 	a = {"id": 1}
 	return JsonResponse(a, safe=False)
 
@@ -42,8 +41,7 @@ def webhook(request):
 		print(json.dumps(req, indent = 4))
 
 		res = processRequest(req)
-		print("Webhook1:")
-		print(res)
+		
 
 		# res = json.dumps(res, indent=4)
 
@@ -51,8 +49,6 @@ def webhook(request):
 		# r.headers['Content-Type'] = 'application/json'
 		# return r
 		
-		# print("Webhook2:")
-		# print(res)
 		return JsonResponse(res, safe=False)
 
 def processRequest(req):
