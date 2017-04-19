@@ -89,6 +89,25 @@ def makeWebhookResult(req, data):
 	context = result.get("contexts")[0]
 	context_name = context.get("name")
 
+	resolvedQuery = result.get("resolvedQuery")
+
+	print("RESOLVED QUERY")
+	print(resolvedQuery)
+
+	
+
+	print("PARAMETERS:")
+	print(parameters)
+
+	print ("CONTEXT: ")
+	print (context)
+
+	print ("CONTEXT NAME: ")
+	print(context_name)
+
+	print("KEYWORD: ")
+	print(keyword)
+
 	total_results = data.get('total_results')
 
 	if req.get("result").get("action") == "movieTeller":
