@@ -35,6 +35,8 @@ def test_list(request):
 @csrf_exempt
 def webhook(request):
 	if request.method == 'POST':
+		print("Request1:")
+		print(request)
 		# req = request.get_json(silent=True, force=True)
 		req = request.__dict__(silent=True, force=True)
 
