@@ -42,11 +42,15 @@ def webhook(request):
 		print(json.dumps(req, indent = 4))
 
 		res = processRequest(req)
-
+		print("Webhook1:")
+		print(res)
+		
 		res = json.dumps(res, indent=4)
 		# r = make_response(res)
 		# r.headers['Content-Type'] = 'application/json'
 		# return r
+		print("Webhook2:")
+		print(res)
 		return JsonResponse(res, safe=False)
 
 def processRequest(req):
@@ -57,6 +61,9 @@ def processRequest(req):
 	result = urlopen(url).read()
 	data = json.loads(result)
 	res = makeWebhookResult(req, data)
+
+	print("Process Request:")
+	print(res)
 
 	return res
 
