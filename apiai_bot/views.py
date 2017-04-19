@@ -99,7 +99,7 @@ def makeWebhookResult(req, data):
 	return {
 		"speech": speech,
 		"displayText": speech,
-		"sourcee": "apiai_bot"
+		"source": "apiai_bot"
 	}
 
 
