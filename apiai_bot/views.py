@@ -60,9 +60,6 @@ def processRequest(req):
 	data = json.loads(result)
 	res = makeWebhookResult(req, data)
 
-	print("Process Request:")
-	print(res)
-
 	return res
 
 def checkParams(req):
@@ -94,7 +91,7 @@ def makeWebhookResult(req, data):
 	print("RESOLVED QUERY")
 	print(resolvedQuery)
 
-	
+
 
 	print("PARAMETERS:")
 	print(parameters)
