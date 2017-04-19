@@ -21,5 +21,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     #url(r'^group/$', views.GroupList.as_view()),
     url(r'^test/$', views.test_list),
-    url(r'^webhook/$', views.weebhook)
+    url(r'^webhook', views.webhook)
 ]

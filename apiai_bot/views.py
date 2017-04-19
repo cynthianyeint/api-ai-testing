@@ -33,7 +33,7 @@ def test_list(request):
 
 
 @csrf_exempt
-def weebhook(request):
+def webhook(request):
 	if request.method == 'POST':
 		req = request.get_json(silent=True, force=True)
 
