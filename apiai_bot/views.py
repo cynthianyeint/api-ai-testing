@@ -44,9 +44,10 @@ def webhook(request):
 		res = processRequest(req)
 
 		res = json.dumps(res, indent=4)
-		r = make_response(res)
-		r.headers['Content-Type'] = 'application/json'
-		return r
+		# r = make_response(res)
+		# r.headers['Content-Type'] = 'application/json'
+		# return r
+		return JsonResponse(res, safe=False)
 
 def processRequest(req):
 	baseurl = "https://api.themoviedb.org/3/discover/movie?api_key=a6669e892c1628955e0af913f38dbb91&"
