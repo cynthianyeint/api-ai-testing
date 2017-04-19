@@ -25,7 +25,7 @@ SECRET_KEY = 'o93#$ro5m^((uyegshjn1hf$wh@a_#n#)@jn%qlr))@o9lt@d1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'cynthia-apidjangobot.herokuapp.com']
 
 
 # Application definition
