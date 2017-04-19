@@ -84,7 +84,7 @@ def makeWebhookResult(req, data):
 	result = req.get("result")
 	action = result.get("action")
 	parameters = result.get("parameters")
-	keyword = result.get("keyword")
+	keyword = parameters.get("keyword")
 
 	context = result.get("contexts")[0]
 	context_name = context.get("name")
