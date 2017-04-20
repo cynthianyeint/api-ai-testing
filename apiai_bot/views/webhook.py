@@ -94,11 +94,14 @@ def makeWebhookResult(req, data):
 	print("RESOLVED QUERY")
 	print(resolvedQuery)
 
+	data = {'query': resolvedQuery}
 	#save data
-	serializer = UserQuerySerializer(data=resolvedQuery)
+	serializer = UserQuerySerializer(data=data)
 	if serializer.is_valid():
 		serializer.save()
 		print("data saved")
+	else:
+		print("data didn't saved")
 	
 
 	print("PARAMETERS:")
