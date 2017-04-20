@@ -80,13 +80,21 @@ DATABASES = {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     # }
-    'default':{ #local
+    # 'default':{ #local
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'teamtempo',
+    #     'USER': 'postgres',
+    #     'PASSWORD': 'admin',
+    #     'HOST': 'localhost',
+    #     'PORT': '',
+    # }
+    'default':{ #heroku
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'teamtempo',
-        'USER': 'postgres',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': 'd38upmb750fuq8',
+        'USER': 'garrwrshpffygc',
+        'PASSWORD': 'b3bb2046b80f562441e8c3bd8b19dd5b075bb4453bddd0e27a30e7c04b9545f0',
+        'HOST': 'ec2-54-235-168-152.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
