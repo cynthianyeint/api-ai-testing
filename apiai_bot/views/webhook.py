@@ -25,6 +25,9 @@ except ImportError:
 import json
 import os
 
+from apiai_bot.models import *
+from apiai_bot.serializers import *
+
 @csrf_exempt
 def test_list(request):
 	a = {"id": 1}
@@ -91,6 +94,10 @@ def makeWebhookResult(req, data):
 	print("RESOLVED QUERY")
 	print(resolvedQuery)
 
+	#save data
+	serializer = UserQuerySerializer(data=resolvedQuery)
+	if serializer.is_valid():
+		serializer.save()
 	
 
 	print("PARAMETERS:")
